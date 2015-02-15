@@ -1,0 +1,14 @@
+﻿<Window x:Class="counter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="55" Width="200"
+        DataContext="{Binding Main, Source={StaticResource Locator}}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="{Binding Count}"/>
+        <Button Grid.Column="1" Content="Count" Command="{Binding CmdIncrement}"/>
+    </Grid>
+</Window>
